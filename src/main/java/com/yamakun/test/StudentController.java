@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+
 @RestController
 @RequestMapping("/students")
 public class StudentController {
@@ -32,7 +33,7 @@ public class StudentController {
     public String test() {
         return "Hello world";
     }
-    
+
     @GetMapping
     public List<Student> getAllStudents() {
         return repository.findAll();
