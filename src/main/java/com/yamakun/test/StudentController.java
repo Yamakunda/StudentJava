@@ -28,12 +28,13 @@ public class StudentController {
         return repository.findByStudentId(studentId);
     }
 
-    @GetMapping("/search")
-    public List<Student> getStudentsByName(@RequestParam String name) {
-        return repository.findByName(name);
+    @GetMapping("/test")
+    public String test() {
+        return "Hello world";
     }
+    
     @GetMapping
-public List<Student> getAllStudents() {
-    return repository.findAll();
-}
+    public List<Student> getAllStudents() {
+        return repository.findAll();
+    }
 }
